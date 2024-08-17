@@ -74,6 +74,8 @@ aside .menu .menu-item {
   cursor: pointer;
   user-select: none;
   --webkit-user-select: none;
+  color: black;
+  text-decoration: none;
 }
 
 aside .menu .menu-item.selected {
@@ -133,70 +135,4 @@ aside footer .stars .star {
 
 .home-page .heart {
   font-size: 9vw;
-}
-
-.today_main {
-  background-color: white;
-  width: 77vw;
-  max-height: 560px;
-  margin: calc(3vw / 2) auto;
-}
-.today_main .today_nav {
-  /* display: flex; */
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-
-  padding-top: 30px;
-  font-size: 30px !important;
-  margin: 0 10px 30px 10px;
-  position: sticky;
-  top: 0;
-  background-color: white;
-}
-
-.today_main .today_nav .today_nav-go_back {
-  position: absolute;
-  top: 30px;
-  left: 20px;
-}
-
-.today_main .today_nav .today_nav_title {
-  font-size: 30px !important;
-}
-
-.today_main .today_sub-title {
-  text-align: center;
-  font-weight: normal;
-}
-
-.today_main .today_tasks {
-  margin-left: 70px;
-  margin-top: 30px;
-  font-size: 22px;
-  margin-bottom: 30px;
-}
-
-.today_main .today_tasks .today_task {
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-  margin: 10px 0;
-  align-items: center;
-}
-.today_main .today_tasks .today_task .task-text {
-  margin-left: 5px;
-}
-.today_main .today_tasks .today_task .task-text input {
-  display: block;
-  outline: 0;
-  border: 0;
-  font-size: inherit;
-  min-width: 100px;
-  width: fit-content;
-}
-
-.today_main .today_tasks .today_task.done .task-text {
-  text-decoration-line: line-through;
-  color: rgba(0, 0, 0, 0.69);
 }
