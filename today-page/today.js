@@ -1,4 +1,4 @@
-let add_todo_btn = document.querySelector(".today_task.add-todo");
+let add_todo_btn = document.querySelector(".task.add-todo");
 
 add_todo_btn.addEventListener("click", createTask);
 

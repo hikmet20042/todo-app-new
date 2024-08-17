@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
-
+  width: 100%;
   padding-top: 30px;
   font-size: 30px !important;
   margin: 0 10px 30px 10px;
@@ -41,35 +41,4 @@
   margin-top: 30px;
   font-size: 22px;
   margin-bottom: 30px;
-}
-
-.today_main .today_tasks .today_task {
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-  margin: 10px 0;
-  align-items: center;
-}
-.today_main .today_tasks .today_task .task-text {
-  margin-left: 5px;
-  margin-right: 100px;
-
-  flex-grow: 1;
-}
-.today_main .today_tasks .today_task .task-text input {
-  display: block;
-  outline: 0;
-  border: 0;
-  font-size: inherit;
-  min-width: 100px;
-  width: 100%;
-}
-
-.today_main .today_tasks .today_task .task-text input:disabled {
-  background-color: white;
-}
-
-.today_main .today_tasks .today_task.done .task-text {
-  text-decoration-line: line-through;
-  color: rgba(0, 0, 0, 0.69);
 }

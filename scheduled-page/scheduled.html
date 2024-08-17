@@ -10,7 +10,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="./scheduled.css" />
+
     <title>Task Management</title>
   </head>
   <body>
@@ -19,17 +21,13 @@
       <main class="menu">
         <h3 class="menu-title">Menu</h3>
         <div class="menu-items">
-          <a class="menu-item" href="./today-page/today.html" id="today">
+          <a href="../today-page/today.html" class="menu-item" id="today">
             <div class="menu-item-logo">
               <i class="fa-regular fa-calendar fa-lg"></i>
             </div>
             <div class="menu-item-text">Today</div>
           </a>
-          <a
-            href="../scheduled-page/scheduled.html"
-            class="menu-item"
-            id="scheduled"
-          >
+          <a class="menu-item selected" id="scheduled">
             <div class="menu-item-logo">
               <i class="fa-solid fa-calendar-days fa-lg"></i>
             </div>
@@ -59,14 +57,25 @@
         </div>
       </footer>
     </aside>
-    <main class="home-page">
-      <h1 class="main_title">Have a good day, Hikmat!</h1>
-      <h2 class="main_sub-title">
-        Start the day with looking through your tasks!
-      </h2>
-      <p class="heart">❤️</p>
-      <div class="logo"></div>
+    <main class="scheduled_main">
+      <nav class="scheduled_nav">
+        <a href="/" class="scheduled_nav-go_back"
+          ><i class="fa-solid fa-chevron-left"></i
+        ></a>
+        <h1 class="scheduled_nav_title">Scheduled</h1>
+        <h2 class="scheduled_sub-title">Tasks</h2>
+      </nav>
+      <div class="scheduled_tasks">
+        <ul>
+          <li class="task add-todo">
+            <div class="task-icon">
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <div class="task-text">Add to-do</div>
+          </li>
+        </ul>
+      </div>
     </main>
   </body>
-  <script src="index.js"></script>
+  <script src="./scheduled.js"></script>
 </html>

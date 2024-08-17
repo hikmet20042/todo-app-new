@@ -136,3 +136,36 @@ aside footer .stars .star {
 .home-page .heart {
   font-size: 9vw;
 }
+
+main .task {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  margin: 10px 0;
+  align-items: center;
+}
+
+main .task .task-text {
+  margin-left: 5px;
+  margin-right: 100px;
+
+  flex-grow: 1;
+}
+
+main .task .task-text.done .task-text {
+  text-decoration-line: line-through;
+  color: rgba(0, 0, 0, 0.69);
+}
+
+main .task .task-text input {
+  display: block;
+  outline: 0;
+  border: 0;
+  font-size: inherit;
+  min-width: 100px;
+  width: 100%;
+}
+
+main .task .task-text input:disabled {
+  background-color: white;
+}
