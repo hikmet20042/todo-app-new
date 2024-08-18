@@ -111,6 +111,9 @@ aside footer .stars {
 aside footer .stars .star {
   cursor: pointer;
 }
+aside footer .stars .star.shadow {
+  opacity: 0.7;
+}
 
 .home-page {
   background-color: white;
