@@ -1,0 +1,113 @@
+.completed-tasks_main {
+  background-color: white;
+  width: 77vw;
+  height: 93vh;
+  margin: calc(3vw / 2) auto;
+  overflow-x: hidden;
+}
+
+.completed-tasks_main .completed-tasks_nav {
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+  padding-top: 30px;
+  font-size: 30px !important;
+  margin: 0 10px 30px 10px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  user-select: none;
+}
+
+.completed-tasks_main .completed-tasks_nav .completed-tasks_nav-go_back {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  color: black;
+}
+
+.completed-tasks_main .completed-tasks_nav .completed-tasks_nav_title {
+  font-size: 30px !important;
+}
+
+.completed-tasks_main .completed-tasks_nav .completed-tasks_sub-title {
+  text-align: center;
+  font-weight: normal;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.completed-tasks_main .completed-tasks_tasks {
+  margin-left: 70px;
+  margin-top: 30px;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.completed-tasks_main .completed-tasks_tasks .scheduled_task {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  align-items: flex-start;
+}
+.completed-tasks_main .completed-tasks_tasks :is(.scheduled_task, .task) {
+  cursor: default;
+}
+
+.completed-tasks_main .completed-tasks_tasks .task-icon {
+  cursor: default;
+}
+.completed-tasks_main .completed-tasks_tasks .scheduled_task .task-text {
+  margin-left: 5px;
+  flex-grow: 10;
+}
+.completed-tasks_main .completed-tasks_tasks .scheduled_task .task-text input {
+  display: block;
+  outline: 0;
+  border: 0;
+  font-size: inherit;
+  min-width: 100px;
+  width: 100%;
+  cursor: default;
+}
+
+.completed-tasks_main
+  .completed-tasks_tasks
+  .scheduled_task
+  .task-text
+  input:disabled {
+  background-color: white;
+}
+
+.completed-tasks_main .completed-tasks_tasks .scheduled_task.done .task-text {
+  text-decoration-line: line-through;
+  color: rgba(0, 0, 0, 0.69);
+  margin-right: 0;
+}
+.completed-tasks_main
+  .completed-tasks_tasks
+  .scheduled_task
+  .task-text
+  .deadline {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  user-select: none;
+}
+
+.completed-tasks_main .completed-tasks_tasks .scheduled_task .task-date {
+  width: 50px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.completed-tasks_main .completed-tasks_tasks .scheduled_task .task-date input {
+  outline: 0;
+  border: 0;
+  display: block;
+  margin-left: -300px;
+  padding: 0;
+  font-size: 24px;
+  cursor: default;
+}

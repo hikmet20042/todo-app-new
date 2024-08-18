@@ -1,0 +1,105 @@
+.all-tasks_main {
+  background-color: white;
+  width: 77vw;
+  height: 93vh;
+  margin: calc(3vw / 2) auto;
+  overflow-x: hidden;
+}
+
+.all-tasks_main .all-tasks_nav {
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+  padding-top: 30px;
+  font-size: 30px !important;
+  margin: 0 10px 30px 10px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  user-select: none;
+}
+
+.all-tasks_main .all-tasks_nav .all-tasks_nav-go_back {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  color: black;
+}
+
+.all-tasks_main .all-tasks_nav .all-tasks_nav_title {
+  font-size: 30px !important;
+}
+
+.all-tasks_main .all-tasks_nav .all-tasks_sub-title {
+  text-align: center;
+  font-weight: normal;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.all-tasks_main .all-tasks_tasks {
+  margin-left: 70px;
+  margin-top: 30px;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.all-tasks_main .all-tasks_tasks .scheduled_task {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  align-items: flex-start;
+}
+.all-tasks_main .all-tasks_tasks :is(.scheduled_task, .task) {
+  cursor: default;
+}
+
+.all-tasks_main .all-tasks_tasks .task-icon {
+  cursor: default;
+}
+.all-tasks_main .all-tasks_tasks .scheduled_task .task-text {
+  margin-left: 5px;
+  flex-grow: 10;
+}
+.all-tasks_main .all-tasks_tasks .scheduled_task .task-text input {
+  display: block;
+  outline: 0;
+  border: 0;
+  font-size: inherit;
+  min-width: 100px;
+  width: 100%;
+  cursor: default;
+}
+
+.all-tasks_main .all-tasks_tasks .scheduled_task .task-text input:disabled {
+  background-color: white;
+}
+
+.all-tasks_main .all-tasks_tasks .scheduled_task.done .task-text {
+  text-decoration-line: line-through;
+  color: rgba(0, 0, 0, 0.69);
+  margin-right: 0;
+}
+.all-tasks_main .all-tasks_tasks .scheduled_task .task-text .deadline {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  user-select: none;
+}
+
+.all-tasks_main .all-tasks_tasks .scheduled_task .task-date {
+  width: 50px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.all-tasks_main .all-tasks_tasks .scheduled_task .task-date input {
+  outline: 0;
+  border: 0;
+  display: block;
+  margin-left: -300px;
+  padding: 0;
+  font-size: 24px;
+  cursor: default;
+}

@@ -18,21 +18,22 @@ function loadAllTasksFromLocalStorage() {
       null,
       scheduled_tasks[value].value,
       scheduled_tasks[value].date,
+      scheduled_tasks[value].done,
       value
     );
   }
 }
 
-function createTask(e, value, date, task_id) {
+function createTask(e, value, date, done, task_id) {
   let add_todo = e?.currentTarget || add_todo_btn;
   let id = createIdForTask();
   let task = document.createElement("li");
-  task.className = "scheduled_task not-done";
+  task.className = done ? "scheduled_task done" : "scheduled_task not-done";
   task.id = task_id || "task" + id;
   let task_icon = document.createElement("div");
   task_icon.className = "task-icon";
   let circle = document.createElement("i");
-  circle.className = "fa-regular fa-circle";
+  circle.className = done ? "fa-solid fa-circle-check" : "fa-regular fa-circle";
   task_icon.append(circle);
   task_icon.addEventListener("click", toggleTasksDone);
   task.append(task_icon);
@@ -41,6 +42,7 @@ function createTask(e, value, date, task_id) {
   let input = document.createElement("input");
   input.type = "text";
   input.value = value || "";
+  input.disabled = done || false;
   input.addEventListener("change", (e) => addTodoToLocalStorage(e));
   input.addEventListener("keydown", (e) => removeTodo(e));
   task_text.append(input);
@@ -53,6 +55,7 @@ function createTask(e, value, date, task_id) {
   task_date.className = "task-date";
   let date_selector = document.createElement("input");
   date_selector.type = "datetime-local";
+  date_selector.disabled = done || false;
   date_selector.addEventListener("focusout", showDateOfScheduledTask);
   date_selector.addEventListener("focusout", addTodoToLocalStorage);
 

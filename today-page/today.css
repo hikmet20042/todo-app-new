@@ -3,6 +3,7 @@
   width: 77vw;
   height: 93vh;
   margin: calc(3vw / 2) auto;
+  overflow-x: hidden;
 }
 .today_main .today_nav {
   /* display: flex; */

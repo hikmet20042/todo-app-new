@@ -12,7 +12,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="./today.css" />
+    <link rel="stylesheet" href="./completed-tasks.css" />
+    <link rel="stylesheet" href="../scheduled-page/scheduled.css" />
+    <link rel="stylesheet" href="../today-page/today.css" />
 
     <title>Task Management</title>
   </head>
@@ -24,7 +26,7 @@
       <main class="menu">
         <h3 class="menu-title">Menu</h3>
         <div class="menu-items">
-          <a class="menu-item selected" id="today">
+          <a href="../today-page/today.html" class="menu-item" id="today">
             <div class="menu-item-logo">
               <i class="fa-regular fa-calendar fa-lg"></i>
             </div>
@@ -46,11 +48,7 @@
             </div>
             <div class="menu-item-text">All</div>
           </a>
-          <a
-            href="../completed-page/completed-tasks.html"
-            class="menu-item"
-            id="completed"
-          >
+          <a class="menu-item selected" id="completed">
             <div class="menu-item-logo">
               <i class="fa-regular fa-circle-check fa-lg"></i>
             </div>
@@ -68,25 +66,18 @@
         </div>
       </footer>
     </aside>
-    <main class="today_main">
-      <nav class="today_nav">
-        <a href="/" class="today_nav-go_back"
+    <main class="completed-tasks_main">
+      <nav class="completed-tasks_nav">
+        <a href="/" class="completed-tasks_nav-go_back"
           ><i class="fa-solid fa-chevron-left"></i
         ></a>
-        <h1 class="today_nav_title">16 August 2024</h1>
-        <h2 class="today_sub-title">Tasks</h2>
+        <h1 class="completed-tasks_nav_title">Completed</h1>
+        <h2 class="completed-tasks_sub-title">Tasks</h2>
       </nav>
-      <div class="today_tasks">
-        <ul>
-          <li class="task add-todo">
-            <div class="task-icon">
-              <i class="fa-solid fa-circle-plus"></i>
-            </div>
-            <div class="task-text">Add to-do</div>
-          </li>
-        </ul>
+      <div class="completed-tasks_tasks">
+        <ul></ul>
       </div>
     </main>
   </body>
-  <script src="./today.js"></script>
+  <script src="./completed-tasks.js"></script>
 </html>

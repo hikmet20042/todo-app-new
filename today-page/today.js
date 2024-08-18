@@ -15,20 +15,20 @@ function loadAllTasksFromLocalStorage() {
     return;
   }
   for (let value in all_tasks) {
-    createTask(null, all_tasks[value].value, value);
+    createTask(null, all_tasks[value].value, all_tasks[value].done, value);
   }
 }
 
-function createTask(e, value, task_id) {
+function createTask(e, value, done, task_id) {
   let add_todo = e?.currentTarget || add_todo_btn;
   let id = createIdForTask();
   let task = document.createElement("li");
-  task.className = "today_task not-done";
+  task.className = done ? "task done" : "task not-done";
   task.id = task_id || "task" + id;
   let task_icon = document.createElement("div");
   task_icon.className = "task-icon";
   let circle = document.createElement("i");
-  circle.className = "fa-regular fa-circle";
+  circle.className = done ? "fa-solid fa-circle-check" : "fa-regular fa-circle";
   task_icon.append(circle);
   task_icon.addEventListener("click", toggleTasksDone);
   task.append(task_icon);
@@ -37,6 +37,7 @@ function createTask(e, value, task_id) {
   let input = document.createElement("input");
   input.type = "text";
   input.value = value || "";
+  input.disabled = done || false;
   input.addEventListener("change", (e) => addTodoToLocalStorage(e));
   input.addEventListener("keydown", (e) => removeTodo(e));
   task_text.append(input);

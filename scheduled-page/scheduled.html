@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -17,7 +18,9 @@
   </head>
   <body>
     <aside>
-      <header class="logo">LOGO</header>
+      <header class="logo">
+        <img src="../assets/logo.png" alt="logo" width="90" />
+      </header>
       <main class="menu">
         <h3 class="menu-title">Menu</h3>
         <div class="menu-items">
@@ -33,13 +36,17 @@
             </div>
             <div class="menu-item-text">Scheduled</div>
           </a>
-          <a class="menu-item" id="all">
+          <a href="../all-tasks-page/all-tasks.html" class="menu-item" id="all">
             <div class="menu-item-logo">
               <i class="fa-solid fa-box-archive fa-lg"></i>
             </div>
             <div class="menu-item-text">All</div>
           </a>
-          <a class="menu-item" id="completed">
+          <a
+            href="../completed-page/completed-tasks.html"
+            class="menu-item"
+            id="completed"
+          >
             <div class="menu-item-logo">
               <i class="fa-regular fa-circle-check fa-lg"></i>
             </div>
@@ -51,9 +58,9 @@
         <div class="stars">
           <div class="star filled"><i class="fa-solid fa-star"></i></div>
           <div class="star filled"><i class="fa-solid fa-star"></i></div>
-          <div class="star"><i class="fa-regular fa-star"></i></div>
-          <div class="star"><i class="fa-regular fa-star"></i></div>
-          <div class="star"><i class="fa-regular fa-star"></i></div>
+          <div class="star"><i class="fa-solid fa-star"></i></div>
+          <div class="star"><i class="fa-solid fa-star"></i></div>
+          <div class="star"><i class="fa-solid fa-star"></i></div>
         </div>
       </footer>
     </aside>

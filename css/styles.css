@@ -49,7 +49,7 @@ aside header {
 }
 
 aside .menu .menu-title {
-  font-size: 1.75vw;
+  font-size: 1.5vw;
   text-align: center;
   line-height: 2.75;
   font-weight: 400;
@@ -152,7 +152,7 @@ main .task .task-text {
   flex-grow: 1;
 }
 
-main .task .task-text.done .task-text {
+main .task.done .task-text {
   text-decoration-line: line-through;
   color: rgba(0, 0, 0, 0.69);
 }

@@ -12,7 +12,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="./today.css" />
+    <link rel="stylesheet" href="./all-tasks.css" />
+    <link rel="stylesheet" href="../scheduled-page/scheduled.css" />
+    <link rel="stylesheet" href="../today-page/today.css" />
 
     <title>Task Management</title>
   </head>
@@ -24,7 +26,7 @@
       <main class="menu">
         <h3 class="menu-title">Menu</h3>
         <div class="menu-items">
-          <a class="menu-item selected" id="today">
+          <a href="../today-page/today.html" class="menu-item" id="today">
             <div class="menu-item-logo">
               <i class="fa-regular fa-calendar fa-lg"></i>
             </div>
@@ -40,7 +42,7 @@
             </div>
             <div class="menu-item-text">Scheduled</div>
           </a>
-          <a href="../all-tasks-page/all-tasks.html" class="menu-item" id="all">
+          <a class="menu-item selected" id="all">
             <div class="menu-item-logo">
               <i class="fa-solid fa-box-archive fa-lg"></i>
             </div>
@@ -68,25 +70,18 @@
         </div>
       </footer>
     </aside>
-    <main class="today_main">
-      <nav class="today_nav">
-        <a href="/" class="today_nav-go_back"
+    <main class="all-tasks_main">
+      <nav class="all-tasks_nav">
+        <a href="/" class="all-tasks_nav-go_back"
           ><i class="fa-solid fa-chevron-left"></i
         ></a>
-        <h1 class="today_nav_title">16 August 2024</h1>
-        <h2 class="today_sub-title">Tasks</h2>
+        <h1 class="all-tasks_nav_title">All</h1>
+        <h2 class="all-tasks_sub-title">Tasks</h2>
       </nav>
-      <div class="today_tasks">
-        <ul>
-          <li class="task add-todo">
-            <div class="task-icon">
-              <i class="fa-solid fa-circle-plus"></i>
-            </div>
-            <div class="task-text">Add to-do</div>
-          </li>
-        </ul>
+      <div class="all-tasks_tasks">
+        <ul></ul>
       </div>
     </main>
   </body>
-  <script src="./today.js"></script>
+  <script src="./all-tasks.js"></script>
 </html>
