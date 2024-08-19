@@ -7,23 +7,28 @@ document.addEventListener("DOMContentLoaded", () => {
 function loadAllTasksFromLocalStorage() {
   let scheduled_tasks = JSON.parse(localStorage.getItem("scheduled_tasks"))[0];
   let todays_tasks = JSON.parse(localStorage.getItem("todays_tasks"))[0];
-  for (let value in todays_tasks) {
-    createTask(
-      null,
-      todays_tasks[value].value,
-      null,
-      todays_tasks[value].done,
-      ""
-    );
+  if (todays_tasks) {
+    for (let value in todays_tasks) {
+      createTask(
+        null,
+        todays_tasks[value].value,
+        null,
+        todays_tasks[value].done,
+        ""
+      );
+    }
   }
-  for (let value in scheduled_tasks) {
-    createTask(
-      null,
-      scheduled_tasks[value].value,
-      scheduled_tasks[value].date,
-      scheduled_tasks[value].done,
-      "scheduled_"
-    );
+
+  if (scheduled_tasks) {
+    for (let value in scheduled_tasks) {
+      createTask(
+        null,
+        scheduled_tasks[value].value,
+        scheduled_tasks[value].date,
+        scheduled_tasks[value].done,
+        "scheduled_"
+      );
+    }
   }
 }
 
