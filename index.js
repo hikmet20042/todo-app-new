@@ -1,5 +1,30 @@
+let hamburger = document.querySelector(".hamburger");
+//
+// hamburger.addEventListener("click", function (e) {
+//   let aside =
+//     e.currentTarget.parentElement.parentElement.previousElementSibling;
+//   if (aside.classList.contains("hide")) {
+//     aside.style.marginLeft = 0;
+//     aside.classList.remove("hide");
+//   } else {
+//     aside.style.marginLeft = "";
+//     aside.classList.add("hide");
+//   }
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
   loadStars();
+  hamburger.addEventListener("click", function (e) {
+    let aside =
+      e.currentTarget.parentElement.parentElement.previousElementSibling;
+    if (aside.classList.contains("hide")) {
+      aside.style.marginLeft = 0;
+      aside.classList.remove("hide");
+    } else {
+      aside.style.marginLeft = "";
+      aside.classList.add("hide");
+    }
+  });
 });
 
 let all_stars = document.querySelectorAll(".star");

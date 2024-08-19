@@ -111,3 +111,42 @@
   font-size: 24px;
   cursor: default;
 }
+
+@media screen and (max-width: 767px) {
+  .completed-tasks_main {
+    width: 95vw;
+    height: 96%;
+    margin-top: 15px;
+    margin-left: 9px;
+  }
+  .completed-tasks_main .completed-tasks_nav {
+    font-size: 24px !important;
+  }
+
+  .completed-tasks_main .completed-tasks_nav .completed-tasks_nav_title {
+    font-size: 24px !important;
+  }
+
+  .completed-tasks_main .completed-tasks_nav .completed-tasks_sub-title {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .completed-tasks_main .completed-tasks_tasks {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .completed-tasks_main .completed-tasks_tasks .scheduled_task {
+    width: 100%;
+  }
+  .completed-tasks_main
+    .completed-tasks_tasks
+    .scheduled_task
+    .task-text
+    input {
+    min-width: 100px;
+    width: 90%;
+    cursor: pointer;
+  }
+}

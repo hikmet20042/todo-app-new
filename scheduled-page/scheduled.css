@@ -99,3 +99,55 @@
   font-size: 24px;
   cursor: pointer;
 }
+.scheduled_main .scheduled_tasks .scheduled_task .task-date input:disabled {
+  background-color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .scheduled_main {
+    width: 95vw;
+    height: 96%;
+    margin-top: 15px;
+    margin-left: 9px;
+  }
+  .scheduled_main .scheduled_nav {
+    font-size: 24px !important;
+  }
+
+  .scheduled_main .scheduled_nav .scheduled_nav_title {
+    font-size: 24px !important;
+  }
+
+  .scheduled_main .scheduled_nav .scheduled_sub-title {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .scheduled_main .scheduled_tasks {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .scheduled_main .scheduled_tasks .scheduled_task {
+    width: 100%;
+  }
+  .scheduled_main .scheduled_tasks .scheduled_task .task-text input {
+    min-width: 100px;
+    width: 90%;
+    cursor: pointer;
+  }
+
+  .scheduled_main .scheduled_tasks .scheduled_task .task-date {
+    width: 50px;
+    overflow: hidden;
+    flex-grow: 1;
+    /* margin-left: -100px; */
+  }
+
+  .scheduled_main .scheduled_tasks .scheduled_task .task-date input {
+    margin-left: -320px;
+  }
+  .scheduled_main .scheduled_tasks .scheduled_task .task-date input:disabled {
+    background-color: white;
+  }
+}

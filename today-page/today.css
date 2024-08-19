@@ -43,3 +43,38 @@
   font-size: 22px;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 767px) {
+  .today_main {
+    width: 95vw;
+    height: 96%;
+    margin-top: 15px;
+    margin-left: 9px;
+  }
+  .today_main .today_nav {
+    font-size: 24px !important;
+  }
+
+  .today_main .today_nav .today_nav_title {
+    font-size: 24px !important;
+  }
+
+  .today_main .today_nav .today_sub-title {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .today_main .today_tasks {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .today_main .today_tasks .today_task {
+    width: 100%;
+  }
+  .today_main .today_tasks .today_task .task-text input {
+    min-width: 100px;
+    width: 90%;
+    cursor: pointer;
+  }
+}

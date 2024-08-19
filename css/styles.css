@@ -33,6 +33,7 @@ aside {
   height: 100vh;
   position: sticky;
   padding-top: 80px;
+  transition: all 200ms;
 }
 
 aside header {
@@ -46,6 +47,9 @@ aside header {
   position: absolute;
   height: 80px;
   top: 0;
+}
+aside header img {
+  width: 90px;
 }
 
 aside .menu .menu-title {
@@ -105,7 +109,7 @@ aside footer .stars {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 1.5vw;
 }
 
 aside footer .stars .star {
@@ -171,4 +175,99 @@ main .task .task-text input {
 
 main .task .task-text input:disabled {
   background-color: white;
+}
+nav .hamburger {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+  }
+  aside {
+    /* display: none; */
+    position: absolute;
+    z-index: 99;
+    padding-top: 60px;
+    width: 180px;
+  }
+  aside.hide {
+    margin-left: -900px;
+  }
+
+  .home-page {
+    width: 95vw;
+    height: 96%;
+    margin-top: 15px;
+    margin-left: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+  }
+  nav .hamburger {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .home-page .main_title {
+    font-size: 5vh;
+  }
+
+  .home-page .main_sub-title {
+    font-size: 4vh;
+  }
+
+  .home-page .heart {
+    font-size: 9vh;
+  }
+
+  aside header {
+    font-size: 2vh;
+    line-height: 3;
+    height: 60px;
+    top: 0;
+  }
+
+  aside header img {
+    width: 70px;
+  }
+
+  aside .menu .menu-title {
+    font-size: 2vh;
+    text-align: center;
+    line-height: 2.75;
+    font-weight: 500;
+  }
+
+  aside .menu .menu-items {
+    height: 20vh;
+    display: grid;
+  }
+
+  aside .menu .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.5vh;
+    border-bottom: var(--border-menu-items);
+    padding: 0.5vw 2vh;
+    cursor: pointer;
+    user-select: none;
+    --webkit-user-select: none;
+    color: black;
+    text-decoration: none;
+  }
+
+  aside .menu .menu-item.selected {
+    background-color: var(--selected-color);
+    color: white;
+  }
 }
