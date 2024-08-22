@@ -88,17 +88,28 @@
   width: 50px;
   overflow: hidden;
   flex-grow: 1;
+  position: relative;
+  height: 1.5rem;
 }
 
 .scheduled_main .scheduled_tasks .scheduled_task .task-date input {
+  display: block;
+  position: absolute;
   outline: 0;
   border: 0;
-  display: block;
-  margin-left: -300px;
+  visibility: hidden;
   padding: 0;
+  right: 110px;
   font-size: 24px;
   cursor: pointer;
+  border: 1px solid red;
 }
+.scheduled_main .scheduled_tasks .scheduled_task .task-date .fa-calendar {
+  display: block;
+  position: absolute;
+  right: 50px;
+}
+
 .scheduled_main .scheduled_tasks .scheduled_task .task-date input:disabled {
   background-color: white;
 }
@@ -145,9 +156,14 @@
   }
 
   .scheduled_main .scheduled_tasks .scheduled_task .task-date input {
-    margin-left: -320px;
+    right: 40px;
   }
   .scheduled_main .scheduled_tasks .scheduled_task .task-date input:disabled {
     background-color: white;
+  }
+  .scheduled_main .scheduled_tasks .scheduled_task .task-date .fa-calendar {
+    display: block;
+    position: absolute;
+    right: 10px;
   }
 }

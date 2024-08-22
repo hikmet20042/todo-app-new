@@ -51,7 +51,11 @@ function createIdForTask() {
   if (todays_tasks) {
     let keys = Object.keys(JSON.parse(todays_tasks)[0]);
     let last_key = keys[keys.length - 1];
-    id = +last_key[last_key.length - 1] + 1;
+    if (last_key) {
+      id = +last_key[last_key.length - 1] + 1;
+    } else {
+      id = 0;
+    }
   }
   return id;
 }
