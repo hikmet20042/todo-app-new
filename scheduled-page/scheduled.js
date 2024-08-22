@@ -43,7 +43,9 @@ function createTask(e, value, date, done, task_id) {
   input.type = "text";
   input.value = value || "";
   input.disabled = done || false;
-  input.addEventListener("change", (e) => addTodoTextToLocalStorage(e));
+  input.addEventListener("change", (e) => {
+    addTodoTextToLocalStorage(e);
+  });
   input.addEventListener("keydown", (e) => removeTodo(e));
   task_text.append(input);
   let deadline = document.createElement("div");
@@ -101,8 +103,7 @@ function addTodoTextToLocalStorage(e) {
 
     scheduled_tasks[0][task_id] = {
       value: element.value,
-      date: element.parentElement.nextElementSibling?.firstElementChild
-        .nextElementSibling?.innerText,
+      date: element.nextElementSibling.innerText,
       done: false,
     };
   }
@@ -110,6 +111,13 @@ function addTodoTextToLocalStorage(e) {
 }
 
 function addTodoDateToLocalStorage(e) {
+  console.log(
+    e.target.parentElement.previousElementSibling.firstElementChild.value
+  );
+  if (
+    e.target.parentElement.previousElementSibling.firstElementChild.value == ""
+  )
+    return;
   let scheduled_tasks = localStorage.getItem("scheduled_tasks");
   let element = e.target;
   let task_id = e.target.parentElement.parentElement.id;
